@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.tiny.cloud/1/l43zxvse21nge9ba2z1vlu4tq1mzwc0apgb14usng9gkrdjx/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <img class=" navbar-left" src="images/fitfuty.png" width="50" height="50" class="d-inline-block align-top" alt="">
+
+        </div>
+            <ul class="nav navbar-nav navbar-right pull-right">
+            <!-- 6 -->
+            <li id="home"><a href="/">HOME</a></li>
+            <li id="about"><a href="/about">ABOUT US</a></li>
+            <li id="contact"><a href="/contact">CONTACT US</a></li>
+          </ul>
+      </div>
+    </nav>
+
+
+
+
+
+    <div class="container ">
+
+
+<h1>Compose</h1>
+
+
+<form action="/compose" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" name="postTitle"   id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Small intro</label>
+      <input type="text" class="form-control" name="postIntro"   id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Post</label>
+    <textarea class="form-control" type="text" id="mytextarea" name="content" cols="100" rows="5"> Hello, World!</textarea>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Publish</button>
+</form>
+
+
+
+
+
+
+</div>
+
+<div class="footer-padding"></div>
+  <div class="footer">
+    <p>Made with ❤️ by Abid Ali</p>
+  </div>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name'
+    });
+  </script>
+  </body>
+
+</html>
