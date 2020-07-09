@@ -74,3 +74,26 @@ body {
 h4{
   color: #fff;
 }
+
+#post img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.margin{
+  margin: 10%;
+}
+
+.minwidth{
+  min-width: 50px;
+}
+
+.setter{
+display: -webkit-inline-box;
+}
+.smpad{
+  padding-bottom: 0.8%;
+}
