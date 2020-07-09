@@ -38,7 +38,7 @@ Post.find(function(err,postsArr){
   if(err){console.log("no error encountered");}
   else{
     postsArr.forEach(function(post){
-
+  
     })
    res.render("home",{startingContent : homeStartingContent, posts:postsArr});
     }
@@ -46,7 +46,6 @@ Post.find(function(err,postsArr){
 
 
 });
-
 
 
 
@@ -91,6 +90,31 @@ post.save()
 
 res.redirect("/");
 })
+
+
+
+app.get("/deletePost",function(req,res){
+
+res.render("delete");
+
+})
+
+app.post("/deletePost",function(req,res){
+
+console.log(req.body);
+
+Post.deleteOne({title:req.body.postTitle},function(err){
+  if(err){
+    res.send(err);
+  }
+  else{
+    res.redirect("/");
+  }
+})
+})
+
+
+
 
 
 
