@@ -38,7 +38,7 @@ Post.find(function(err,postsArr){
   if(err){console.log("no error encountered");}
   else{
     postsArr.forEach(function(post){
-      
+
     })
    res.render("home",{startingContent : homeStartingContent, posts:postsArr});
     }
@@ -46,6 +46,7 @@ Post.find(function(err,postsArr){
 
 
 });
+
 
 
 
