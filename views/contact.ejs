@@ -1,10 +1,72 @@
-<%- include("partials/header") -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fit Fury</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
 
 
 
-<h1>Contact</h1>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header setter">
+        <img class=" navbar-left" src="images/fitfuty.png" width="50" height="50" class="d-inline-block align-top" alt="">
 
-<p><%= contactContent %></p>
+      </div>
+      <ul class="nav navbar-nav navbar-right pull-right">
+        <!-- 6 -->
+        <li id="home"><a href="/">HOME</a></li>
+        <li id="about"><a href="/about">ABOUT US</a></li>
+        <li id="contact"><a href="/contact">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
-<%- include("partials/footer") -%>
+
+
+
+  <div class="container ">
+
+
+    <h1>Contact us</h1>
+
+
+    <form action="/contact" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" class="form-control" name="name" >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" name="email" ">
+      </div>
+      <div class="form-group">
+        <label >Message</label>
+        <textarea class="form-control" type="text" id="mytextarea" name="message" cols="100" rows="5"> </textarea>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+
+
+
+  </div>
+
+  <div class="footer-padding"></div>
+  <div class="footer">
+    <p>© Copyright 2020 Fit Fury</p>
+  </div>
+
+</body>
+
+</html>

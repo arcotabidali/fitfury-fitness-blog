@@ -27,6 +27,12 @@ app.use(express.static("public"));
     content:String
   });
 
+  var Query = mongoose.model('Query', {
+    name : String,
+    email : String,
+    message:String
+  });
+
 
 
 
@@ -38,7 +44,7 @@ Post.find(function(err,postsArr){
   if(err){console.log("no error encountered");}
   else{
     postsArr.forEach(function(post){
-  
+
     })
    res.render("home",{startingContent : homeStartingContent, posts:postsArr});
     }
@@ -60,7 +66,25 @@ res.render("about",{aboutContent :aboutContent});
 
 app.get("/contact",function(req,res){
 
-res.render("contact",{contactContent : contactContent});
+res.render("contact");
+
+})
+
+
+
+app.post("/contact",function(req,res){
+
+var form={
+  name:req.body.name,
+  email:req.body.email,
+  message:req.body.message
+
+}
+
+const query = new Query(form);
+
+query.save();
+res.redirect("/");
 
 })
 
