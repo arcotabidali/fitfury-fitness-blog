@@ -57,7 +57,7 @@ Post.find(function(err,postsArr){
 
 app.get("/about",function(req,res){
 
-res.render("about",{aboutContent :aboutContent});
+res.render("about");
 
 })
 
