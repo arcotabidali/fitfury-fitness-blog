@@ -124,7 +124,7 @@ res.render("delete");
 
 app.post("/deletePost",function(req,res){
 
-console.log(req.body);
+
 
 Post.deleteOne({title:req.body.postTitle},function(err){
   if(err){
@@ -142,18 +142,15 @@ Post.deleteOne({title:req.body.postTitle},function(err){
 
 
 app.get("/posts/:post", function(req,res) {
-
-const postReq =_.lowerCase(req.params.post);
-
-
+var postId = req.params.post;
 var sendPost;
 var postSent="false";
 Post.find(function(err,postsArr){
-  if(err){console.log("no error encountered");}
+  if(err){console.log("error encountered");}
   else{
     postsArr.forEach(function(post){
-    var postTitle = _.lowerCase(post.title);
-    if(postTitle==postReq){
+
+    if(postId==post.id){
        sendPost = post;
        postSent="true";
         res.render("post",{displayPost:sendPost});
